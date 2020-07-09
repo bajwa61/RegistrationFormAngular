@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <body>
+  <body class="route-container" [@routeAnimation]="getDepth(myOutlet)">
 
-    <router-outlet>
+    <router-outlet #myOutlet="outlet">
     </router-outlet>
    
 

@@ -8,10 +8,11 @@ import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes:Routes=[
-  { path:'signIn',component:SignInComponent },
-  { path:'signUp',component:SignUpComponent },
+  { path:'signIn',component:SignInComponent,data: {depth: 1} },
+  { path:'signUp',component:SignUpComponent,data: {depth: 2} },
 ]
 
 
@@ -26,6 +27,7 @@ const appRoutes:Routes=[
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

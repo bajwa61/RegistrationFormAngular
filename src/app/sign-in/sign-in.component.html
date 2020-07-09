@@ -1,0 +1,51 @@
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-8 left-section">
+
+        <h1 class="title">Login to Your Account</h1>
+
+        <div class="social-text">
+            Login using social networks
+        </div>
+
+        <div class="social-icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </div>
+
+        <div class="div-line">
+            <hr style="display: inline-block;width:20%;">
+            <span style="position: relative;bottom:1.5vh;" class="nest-line-text">OR</span>
+            <hr style="display: inline-block;width:20%;">
+        </div>
+        
+        <form [formGroup]="form2">
+            <input type="text" placeholder="Email" class="i1" formControlName="email">
+            <br><br>
+            <div *ngIf="form2.get('email').touched && form2.get('email').invalid " class="alert alert-danger">Email Required</div>
+            <input type="password" placeholder="Password" class="i1" formControlName="password">
+            <br><br>
+            <div *ngIf="form2.get('password').touched && form2.get('password').invalid " class="alert alert-danger">
+                Password Required
+            </div>
+            <button type="submit" class="signButton">Sign In</button>
+        </form>
+
+    </div>
+    <div class="col-md-4 side-section">
+
+        <h2 >New Here</h2>
+
+        <p>Sign up and discover a great amount of new opportunities!</p>
+
+       
+            <a routerLink="/signUp">
+                <button class="signButton">Sign Up</button>
+           </a>
+            
+        
+
+    </div>
+</div>
+</div>
